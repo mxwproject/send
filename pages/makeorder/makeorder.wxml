@@ -1,0 +1,196 @@
+<!--pages/makeorder/makeorder.wxml-->
+<scroll-view class="wrap" scroll-with-animation="true" scroll-top="{{scrollTop}}">
+	
+	<view class="detail">
+		<view class="d-content">
+			<div class="d-line">
+				<view class="intro">
+					产品名称：
+				</view>
+				<view class="content">
+					<view class="name tourname red-word">
+						{{ tourline_name }}
+					</view>
+				</view>
+			</div>
+			<div class="d-line">
+				<view class="intro">
+					出发城市：
+				</view>
+				<view class="content">
+					<view class="name red-word">
+						上海
+					</view>
+				</view>
+			</div>
+			<div class="d-line">
+				<view class="intro">
+					出发日期：
+				</view>
+				<view class="content">
+					<view class="name">
+					  <view class="red-word">
+					  	{{ start_time }}
+					  </view>       
+					  <view>
+					  	 出发天数：   {{ tour_total_day }}
+					  </view>
+					</view>
+				</view>
+			</div>
+			<div class="d-line">
+				<view class="intro">
+					出行人数：
+				</view>
+				<view class="content">
+					<view class="name">
+						<view class="red-word">
+							{{ adult_count }}
+						</view>
+						<view>
+							成人
+						</view>        
+						<view class="red-word child-count">
+							{{ child_count }}
+						</view>
+						<view>
+							儿童
+						</view>
+					</view>
+				</view>
+			</div>
+		</view>
+	</view>
+
+	<view class="contact">
+		<view class="title">联系人信息</view>	
+		<view class="c-item c-item-line">
+			<image class="c-icon" src="{{nameIcon}}" mode="scaleToFill"></image>
+			<input 
+				placeholder="请输入真实姓名" 
+				class="c-input" 
+				placeholder-style="font-size: 26rpx;color: #888;"
+				bindinput="handleCnameInput"></input>
+		</view>
+		<view class="c-item c-item-line">
+			<image class="c-icon" src="{{phoneIcon}}" mode="scaleToFill"></image>
+			<input 
+				placeholder="用于接收订单信息的正确手机号码" 
+				class="c-input" 
+				placeholder-style="font-size: 26rpx;color: #888;"
+				bindinput="handleCphoneInput"></input>
+		</view>
+		<view class="c-item c-item-line">
+			<image class="c-icon" src="{{emailIcon}}" mode="scaleToFill"></image>
+			<input placeholder="请填写邮箱" class="c-input" placeholder-style="font-size: 26rpx;color: #888;"
+			bindinput="handleCemailInput"></input>
+		</view>
+		<view class="c-item">
+			<image class="c-icon" src="{{addressIcon}}" mode="scaleToFill"></image>
+			<input placeholder="请填写具体收货地址" class="c-input" placeholder-style="font-size: 26rpx;color: #888;"
+			bindinput="handleCaddressInput"></input>
+		</view>
+	</view>
+
+	<view class="p-list">
+		<view class="title">出行人信息</view>
+		<view class="p-item" wx:for="{{persons}}">
+			<view class="c-item">
+				<image class="c-icon" src="{{nameIcon}}" mode="scaleToFill"></image>
+				<input placeholder="出行人{{index+1}}的真实姓名" class="c-input" placeholder-style="font-size: 26rpx;color: #888;"
+				data-index="{{index}}"
+				bindinput="handlePnameInput"></input>
+			</view>
+			<view class="c-item">
+				<!-- <image class="c-icon" src="{{idcardIcon}}" mode="scaleToFill"></image> -->
+				<picker bindchange="bindPickerChange" data-index="{{index}}" value="{{item.index2}}" range="{{idTypeArray}}">
+			    <view class="picker">
+			      {{idTypeArray[item.index2]}}
+			    </view>
+			  </picker>
+				<input placeholder="请输入证件号码" class="c-input" placeholder-style="font-size: 26rpx;color: #888;"
+				data-index="{{index}}"
+				bindinput="handlePidcardInput"></input>
+			</view>
+			<view class="c-item">
+				<image class="c-icon" src="{{phoneIcon}}" mode="scaleToFill"></image>
+				<input placeholder="请填写手机号码" class="c-input" placeholder-style="font-size: 26rpx;color: #888;"
+				data-index="{{index}}"
+				bindinput="handlePphoneInput"></input>
+			</view>
+		</view>
+	</view>
+
+	<view class="remark">
+		<view class="ctitle remark-title">备注</view>
+		<input 
+			class="remark-input"
+			placeholder-style="font-size: 26rpx;color: #888;"
+			placeholder="请填写备注内容（可不填）" 
+			maxlength="120"
+			value="{{meno}}"
+			bindinput="handleRemarkInput"
+			name="textarea"/>
+	</view>
+
+	<view class="coupon" bind:tap="chooseCoupon">
+		<view class="left">
+			<image class="c-icon" src="{{couponIcon}}" mode="scaleToFill"></image>
+			<view class="coupon-name">优惠卡券</view>
+			<view class="g-coupon" wx:if="{{cangetcoupon}}" catch:tap="showModal">（点击领券）</view>
+		</view>
+		<view class="right">
+			<view class="drop-count">
+				{{ couponName }}
+			</view>
+			<image class="c-icon" src="{{arrowIcon}}" mode="scaleToFill"></image>
+		</view>
+	</view>
+
+	<view class="operation">
+		<view class="cc">
+			<view class="cc-contact">
+				<button class="cs_button" open-type="contact" session-from="weapp">
+				</button> 
+				<image class="cc-icon we-icon" src="{{wechatIcon}}" mode="scaleToFill"></image>
+			</view>
+		</view>
+		<view class="buy">
+			<view class="total">
+				总额：￥{{ price }}
+			</view>
+			<button class="buy-btn" bind:tap="handleOrder">
+				提交订单
+			</button>
+		</view>
+	</view>
+</scroll-view>
+
+
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showFlag}}"></view>
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showFlag}}">
+	<view class="couponxx" bind:tap="getCoupon" data-id="{{voucher.id}}">
+      <view class="item {{voucher.status == 1 ? 'active-bg' : 'white-word noactive-bg'}}">
+      <view class="leftxx">
+        <view class="amount">
+          ￥{{ voucher.money / 100 }}
+        </view>
+        <view class="intro">
+          <view>代金券</view>
+          <view>全场任意使用</view>
+          <view class="redword">本券不可叠加使用</view>
+        </view>
+      </view>
+      <block wx:if="{{voucher.status == 1}}">
+        <view class="right first-right">
+          立即领取
+        </view>
+      </block>
+      <block wx:else>
+        <view class="right white-word">
+          已领取
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

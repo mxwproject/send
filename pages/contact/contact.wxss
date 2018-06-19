@@ -1,0 +1,94 @@
+/* pages/contact/contact.wxss */
+
+.c-wrap {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding-top: 40rpx;
+}
+
+.c-item {
+	width: 200rpx;
+	height: 200rpx;
+	border-radius: 12rpx;
+	box-shadow: 0 2rpx 16rpx 0 rgba(53,53,53,0.2);
+	text-align: center;
+
+}
+
+.cs_button {
+	width: 200rpx;
+	height: 200rpx;
+	background: linear-gradient(to bottom right, #9EEA6A , #39AB4A);
+	padding-top: 20rpx;
+	box-sizing: border-box;
+	/*z-index: 200;*/
+	/*display: flex;
+	flex-direction: column;*/
+}
+
+.c-icon {
+	width: 88rpx;
+	height: 88rpx;
+}
+
+.c-text {
+	color: #FFF;
+	font-size: 28rpx;
+}
+
+.c-wx {
+	width: 100%;
+	left: 0;
+	pointer-events: none;
+}
+
+.wechat {
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.phone {
+	background: linear-gradient(to bottom right, #6FBCF3 , #2993E7);
+}
+
+.wx_button {
+	/*opacity: 0;*/
+}
+
+.wx-content {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 20rpx;
+	left: 0;
+	/*z-index: 200;*/
+	pointer-events: none;
+}
+
+.p-list {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.p-list .content {
+	width: 600rpx;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2000;
+	background: #FFF;
+	border-radius: 8rpx;
+}
+.p-item {
+	padding: 20rpx 0;
+	border-bottom: 1rpx solid #eee;
+	text-align: center;
+}

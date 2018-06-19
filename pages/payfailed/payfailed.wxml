@@ -1,0 +1,7 @@
+<view class="success">
+	<icon type="warn" size="80"/>
+	<view class="s-tip">
+		支付失败
+	</view>
+	<view bind:tap="goOrderList" class="detail">返回订单列表</view>
+</view>

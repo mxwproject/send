@@ -1,0 +1,84 @@
+<!--index.wxml-->
+<view class="center">
+  <view class="avatar">
+    <open-data type="userAvatarUrl" class="avatar-img"></open-data>
+  </view>
+  <view class="list">
+  	<view class="item" bind:tap="handleWaitpayList">
+  		<view class="title">
+  			<image class="title-icon" src="{{orderIcon}}" mode="scaleToFill"></image>
+  			<text>未出行订单</text>
+  		</view>
+  		<view class="arrow">
+        <!-- <text class="wait-pay" wx:if="{{haveWaitPay}}">待付款</text> -->
+  			<image class="arrow-icon" src="{{arrowIcon}}" mode="scaleToFill"></image>
+  		</view>
+  	</view>
+    <view class="item" bind:tap="handleNopayList">
+      <view class="title">
+        <image class="title-icon" src="{{orderIcon}}" mode="scaleToFill"></image>
+        <text>待付款订单</text>
+      </view>
+      <view class="arrow">
+        <!-- <text class="wait-pay" wx:if="{{haveWaitPay}}">待付款</text> -->
+        <image class="arrow-icon" src="{{arrowIcon}}" mode="scaleToFill"></image>
+      </view>
+    </view>
+    <!-- <view class="order" wx:if="{{haveFinish}}">
+      <view class="cards">
+        <view class="date">
+          {{ order.date }}
+        </view>
+        <view class="card">
+          <view class="img">
+            <image class="timage" src="{{ order.image }}" mode="scaleToFill"></image>
+          </view>
+          <view class="detail">
+            <view class="name">
+              {{ order.name }}
+            </view>
+            <view class="sdate">
+              {{ order.adult }} 成人 {{ order.child }} 儿童
+            </view>
+            <view class="sdate">
+              {{ order.startDate }} 出发
+            </view>
+            <view class="options">
+              <view class="success">
+                已成交
+              </view>
+              <view class="view-detail" data-orderno="{{ order.orderNo }}" bind:tap="viewDetail">
+                订单详情
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="more" bind:tap="handleNopayList">
+        <view>查</view>
+        <view>看</view>
+        <view>更</view>
+        <view>多</view>
+      </view>
+    </view> -->
+  	<view class="item" bind:tap="handleOrderList">
+  		<view class="title">
+  			<image class="title-icon" src="{{historyIcon}}" mode="scaleToFill"></image>
+  			<text>历史订单</text>
+  		</view>
+  		<view class="arrow">
+  			<image class="arrow-icon" src="{{arrowIcon}}" mode="scaleToFill"></image>
+  		</view>
+  	</view>
+    <view class="item" bind:tap="handleCouponList">
+      <view class="title">
+        <image class="title-icon" src="{{couponIcon}}" mode="scaleToFill"></image>
+        <text>优惠卡券</text>
+      </view>
+      <view class="arrow">
+        <text class="wait-pay" wx:if="{{voucherCount}}">{{voucherCount}}</text>
+        <image class="arrow-icon" src="{{arrowIcon}}" mode="scaleToFill"></image>
+      </view>
+    </view>
+  </view>
+</view>

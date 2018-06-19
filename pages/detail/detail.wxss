@@ -1,0 +1,292 @@
+/* pages/detail/detail.wxss */
+page {
+  background-color: #F1F2F3;
+}
+
+.d-wrap {
+	/*box-sizing: border-box;
+	height: 736px;
+	overflow: hidden;*/
+}
+
+.intro {
+	background-color: #FFF;
+	padding-bottom: 20rpx;
+}
+
+.banner {
+	width: 100%;
+	height: 364rpx;
+	position: relative;
+}
+
+.banner-img {
+	width: 100%;
+	height: 364rpx;
+}
+
+.banner-number {
+	position: absolute;
+	right: 20rpx;
+	bottom: 16rpx;
+	font-size: 24rpx;
+	color: rgba(255, 255, 255, .6);
+}
+
+.title {
+	margin-top: 30rpx;
+	color: #333;
+	font-size: 38rpx;
+	font-weight: 700;
+	padding: 0 20rpx;
+}
+
+.tags {
+	margin: 10rpx 0;
+}
+
+.sd {
+	padding: 0 20rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 120rpx;
+}
+
+.saled {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	font-size: 28rpx;
+	color: #FA0606;
+	padding-bottom: 10rpx;
+}
+
+.real-price {
+	font-size: 48rpx;
+	font-weight: 700;
+	color: #FA0606;
+}
+
+.up-price {
+	font-size: 28rpx;
+	color: #353535;
+	padding-bottom: 10rpx;
+	padding-left: 2rpx;
+}
+
+
+.price { 
+	display: flex;
+	align-items: flex-end;
+	font-size: 28rpx;
+	color: #FA0606;
+	padding-bottom: 20rpx;
+}
+
+.gray {
+	padding: 0 20rpx;
+}
+
+.line {
+	width: 100%;
+	height: 1rpx;
+	background-color: rgba(0, 0, 0, .1);
+}
+
+.desc {
+	padding: 10rpx 20rpx 0 20rpx;
+	font-size: 28rpx;
+	color: #888;
+}
+
+.html-c {
+	margin-top: 20rpx;
+	padding: 20rpx;
+	background-color: #FFF;
+	min-height: 200rpx;
+}
+
+.operation {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin-top: 40rpx;
+	display: flex;
+	flex-direction: row;
+	height: 100rpx;
+	background-color: #FFF;
+	border-top: 1rpx solid #eee;
+}
+
+.cc {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+}
+
+.cc-contact {
+	flex: 1;
+	position: relative;
+}
+
+.cc-cart {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cc-icon {
+	width: 48rpx;
+	height: 48rpx;
+}
+
+.we-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+}
+
+.cs_button{
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.buy {
+	flex: 2;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.buy-btn {
+	width: 270rpx;
+	height: 100%;
+	color: #FFF;
+	font-size: 34rpx;
+	background-color: #fe4f4f;
+	border-radius: 0;
+	margin: 0;
+	line-height: 100rpx;
+}
+
+.jg {
+	height: 160rpx;
+	background-color: #F1F2F3;
+}
+
+.c-wrap {
+	width: 100%;
+	background-color: rgba(0, 0, 0, .4);
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+
+.c-content {
+	width: 100%;
+	background-color: #FFF;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding-right: 20rpx;
+	/*padding-bottom: 50rpx;*/
+}
+
+.c-title {
+	font-size: 34rpx;
+	font-weight: bold;
+	padding: 40rpx 0;
+	padding-left: 20rpx;
+	color: #70AAF4;
+}
+
+.c-list {
+	max-height: 400rpx; 
+	overflow-y: scroll;
+	padding-left: 20rpx;
+}
+
+.c-item {
+	width: 80%;
+	border-radius: 40rpx;
+	border: 1rpx solid #353535;
+	margin: 20rpx 0;
+	font-size: 26rpx;
+	color: #353535;
+	padding: 14rpx 0 14rpx 20rpx;
+	box-sizing: border-box;
+}
+
+.c-active {
+	background-color: #70AAF4;
+	color: #FFF;
+	border: none;
+}
+
+.c-count {
+	display: flex;
+	flex-direction: row;
+	font-size: 24rpx;
+	color: #353535;
+	margin-bottom: 36rpx;
+	padding: 20rpx 0;
+	border-bottom: 1rpx solid #f8f8f8;
+	padding-left: 20rpx;
+}
+
+.c-adult {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.c-child {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.c-count-title {
+	margin-right: 20rpx;
+	font-size: 30rpx;
+}
+.c-button {
+	background-color: #70AAF4;
+	border: none;
+	width: 10rpx;
+	height: 55rpx;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	color: #FFF;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+}
+.c-input {
+	width: 55rpx;
+	height: 20rpx;
+	margin: 0 20rpx;
+	text-align: center;
+	border: 1rpx solid #888;
+	border-radius: 8rpx;
+}
+.c-submit {
+	width: 95%;
+	margin: 0 auto;
+	height: 80rpx;
+	background-color: #fe4f4f;
+	font-size: 28rpx;
+	color: #fff;
+	text-align: center;
+	line-height: 80rpx;
+	border-radius: 40rpx;
+	margin-bottom: 40rpx;
+}

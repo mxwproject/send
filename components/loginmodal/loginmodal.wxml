@@ -1,0 +1,30 @@
+<view class="wrap">
+	<view class="modal">
+		<view class="close" catch:tap="close">
+			X
+		</view>
+		<view class="mobile">
+			<view class="left">
+				<input bindinput="handlePhoneInput" placeholder="请输入手机号"></input>
+			</view>
+			<view class="right">
+				<button class="getcode" bind:tap="getSendCode" wx:if="{{captchaFlag}}">
+					获取验证码
+				</button>
+				<button class="getcode" wx:else>
+					{{ count }}
+				</button>
+			</view>
+		</view>
+		<view class="code">
+			<input
+				bindinput="handleCodeInput"
+				placeholder="输入验证码"
+				>
+			</input>
+		</view>
+		<button class="submit" catch:tap="bindMobile">
+			绑定手机号
+		</button>
+	</view>
+</view>

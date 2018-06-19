@@ -1,0 +1,268 @@
+/**index.wxss**/
+
+.company-wrapper {
+}
+
+.company-banner {
+	width: 100%;
+	height: 115rpx;
+}
+
+.swiper-item {
+	display: block;
+	height: 364rpx;
+}
+
+
+.slide-image {
+	width: 100%;
+	height: 364rpx;
+}
+
+.search {
+	/*width: 100%;*/
+	height: 66rpx;
+	padding: 30rpx 20rpx 0rpx 20rpx;
+	display: flex;
+	flex-direction: row;
+}
+
+.location {
+	color: #FFF;
+	font-size: 24rpx;
+	background-color: #70AAF4;
+	width: 106rpx;
+	height: 100%;
+	border-radius: 0px;
+  border-bottom-left-radius: 12rpx;
+  border-top-left-radius: 12rpx;
+  /*text-align: center;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.location .arrow {
+	width: 0;
+	height: 0;
+	border-left: 10rpx solid #70AAF4;
+	border-right: 10rpx solid #70AAF4;
+	border-top: 10rpx solid #FFF;
+	border-bottom: 10rpx solid #70AAF4;
+	margin-top: 12rpx;
+	margin-left: 6rpx;
+}
+
+.keyword-input {
+	padding-left: 20rpx;
+	background-color: rgba(112, 170, 244, 0.3);
+	overflow: hidden;
+	border-radius: 0px;
+  border-radius: 12rpx;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20rpx;
+  font-size: 24rpx;
+	color: #888;
+}
+
+.search-icon {
+	width: 44rpx;
+	height: 44rpx;
+}
+
+.category {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0 20rpx;
+	margin-bottom: 56rpx;
+	margin-top: 40rpx;
+}
+
+.cgitem {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 228rpx;
+	height: 100rpx;
+	color: #FFF;
+	font-size: 28rpx;
+	border-radius: 12rpx;
+	box-shadow: 0 2rpx 16rpx 0 rgba(53,53,53,0.2);
+}
+
+.line-icon {
+	width: 50rpx;
+	height: 50rpx;
+	margin-right: 20rpx;
+}
+
+.longLine {
+	background: linear-gradient(to bottom right, #FC9582 , #4693E5);
+}
+.middleLine {
+	background: linear-gradient(to bottom right, #FEE96C , #C573E2);
+}
+.shortLine {
+	background: linear-gradient(to bottom right, #96F26D , #61B7C6);
+}
+
+.recommend-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	margin-bottom: 30rpx;
+}
+
+.recommend-title-text {
+	padding: 0 20rpx;
+	letter-spacing: 6rpx;
+	font-size: 32rpx;	
+	font-weight: 700;
+}
+
+.recommend-title-line {
+	width: 60rpx;
+	height: 4rpx;
+	background-color: #353535;
+}
+
+.recommend-list {
+	padding: 0 30rpx 60rpx 30rpx;
+}
+
+.recommend-best {
+	border-radius: 12rpx;
+	box-shadow: 0 2rpx 16rpx 0 rgba(53,53,53,0.2);
+}
+
+.rbb {
+	height: 300rpx;
+	position: relative;
+	overflow: hidden;
+}
+
+.rbb-p {
+
+}
+
+.rbb-banner {
+	width: 100%;
+	height: 300rpx;
+	border-top-left-radius: 12rpx;
+	border-top-right-radius: 12rpx;
+}
+
+.rbb-n {
+	width: 97%;
+	z-index: 200;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 14rpx 20rpx;
+	color: #000;
+	font-size: 28rpx;
+	font-weight: 700;
+}
+
+.rbi {
+	height: 80rpx;
+	padding: 16rpx 20rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.rbi-l {
+	font-size: 24rpx;
+}
+
+.rbi-intro {
+	width: 500rpx;
+	color: #888;
+	margin-bottom: 10rpx;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.rbi-saled {
+	color: #353535;
+}
+
+.rbi-r {
+	font-size: 32rpx;
+	color: #FF0000;
+	font-weight: 700;
+	line-height: 80rpx;
+	text-align: center;
+}
+
+.coupon {
+	margin-top: 40rpx;
+	padding: 0 20rpx;
+}
+
+.item {
+	display: flex;
+	flex-direction: row;
+	height: 150rpx;
+	/*box-shadow: 0 2rpx 16rpx 0 rgba(53,53,53,0.2);*/
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.left {
+	width: 520rpx;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.amount {
+	font-size: 70rpx;
+	font-weight: bold;
+	margin-right: 20rpx;
+}
+.intro {
+	font-size: 24rpx;
+	color: #353535;
+}
+.right {
+	box-sizing: border-box;
+	width: 200rpx;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 28rpx;
+	word-break: normal;
+	padding-left: 30rpx;
+}
+.first-right {
+	padding-left: 40rpx;
+}
+
+.active-bg {
+	background-image: url(http://p96r0a67g.bkt.clouddn.com/%E4%BB%A3%E9%87%91%E5%88%B8.png);
+}
+
+.noactive-bg {
+	background-image: url(http://p96r0a67g.bkt.clouddn.com/%E5%B7%B2%E9%A2%86%E5%8F%96%E4%BC%98%E6%83%A0%E5%88%B8.png);
+}
+
+.white-word {
+	color: #FFF;
+}
+.f1f2f3 {
+	color: #f1f2f3;
+}
+
+.redword {
+	color: #FF0000;
+}

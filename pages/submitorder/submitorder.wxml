@@ -1,0 +1,121 @@
+<view class="wrap">
+	<view class="detail">
+		<view class="d-content">
+			<div class="d-line">
+				<view class="intro">
+					产品名称：
+				</view>
+				<view class="content">
+					<view class="name tourname red-word">
+						{{ tourline_name }}
+					</view>
+				</view>
+			</div>
+			<div class="d-line">
+				<view class="intro">
+					出发城市：
+				</view>
+				<view class="content">
+					<view class="name red-word">
+						上海
+					</view>
+				</view>
+			</div>
+			<div class="d-line">
+				<view class="intro">
+					出发日期：
+				</view>
+				<view class="content">
+					<view class="name">
+					  <view class="red-word">
+					  	{{ start_time }}
+					  </view>       
+					  <view>
+					  	 出发天数：   {{ tour_total_day }}
+					  </view>
+					</view>
+				</view>
+			</div>
+			<div class="d-line">
+				<view class="intro">
+					出行人数：
+				</view>
+				<view class="content">
+					<view class="name">
+						<view class="red-word">
+							{{ adult_count }}
+						</view>
+						<view>
+							成人
+						</view>        
+						<view class="red-word child-count">
+							{{ child_count }}
+						</view>
+						<view>
+							儿童
+						</view>
+					</view>
+				</view>
+			</div>
+		</view>
+	</view>
+	<view class="traveller-info base-content">
+		<view class="contacter">
+			<view class="ctitle">联系人信息</view>
+			<view class="ct-line">
+				{{ contacter.name }}  {{ contacter.phone }}
+			</view>
+			<view class="ct-line">
+				{{ contacter.email }}
+			</view>
+			<view class="ct-line">
+				{{ contacter.address }}
+			</view>
+		</view>
+		<view class="travellers">
+			<view class="ctitle">出行人信息</view>
+			<view class="t-list">
+				<view class="t-item" wx:for="{{travellers}}">
+					<view class="order-number">
+						<view class="o-n">
+							{{ index + 1 }}
+						</view>
+					</view>
+					<view class="t-detail">
+						{{ item.name }}  {{ item.phone }}
+						<view>
+							{{ item.idcard }}
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="remark-wrap">
+		<view class="ctitle">备注</view>
+		<view class="remark">
+			{{ order_memo }}
+		</view>
+	</view>
+
+	<view class="operation">
+		<view class="cc">
+			<view class="cc-contact">
+				<button class="cs_button" open-type="contact" session-from="weapp">
+				</button> 
+				<image class="cc-icon we-icon" src="{{wechatIcon}}" mode="scaleToFill"></image>
+			</view>
+		</view>
+		<view class="buy">
+			<view class="total">
+				<view>
+					总额：￥{{price}}
+				</view>
+			</view>
+			<button class="buy-btn" bind:tap="handleOrder">
+				确认支付 
+			</button>
+		</view>
+	</view>
+</view>

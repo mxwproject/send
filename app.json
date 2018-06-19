@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/mycenter/mycenter",
+    "pages/shopping-cart/shopping-cart",
+    "pages/contact/contact",
+    "pages/citylist/citylist",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/testpay/testpay",
+    "pages/ordersuccess/ordersuccess",
+    "pages/coupon/coupon",
+    "pages/orderlist/orderlist",
+    "pages/notusedorder/notusedorder",
+    "pages/paysuccess/paysuccess",
+    "pages/payfailed/payfailed",
+    "pages/makeorder/makeorder",
+    "pages/submitorder/submitorder"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#70AAF4",
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "旅优惠",
+    "navigationBarTextStyle": "#FFF"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "backgroundColor": "#f0f0f0",
+    "color": "#353535",
+    "selectedColor": "#70AAF4",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./static/imgs/common/index.png",
+        "selectedIconPath": "./static/imgs/common/index-select.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "./static/imgs/common/category.png",
+        "selectedIconPath": "./static/imgs/common/category-select.png"
+      },
+      {
+        "pagePath": "pages/shopping-cart/shopping-cart",
+        "text": "收藏",
+        "iconPath": "./static/imgs/common/cart.png",
+        "selectedIconPath": "./static/imgs/common/cart-select.png"
+      },
+      {
+        "pagePath": "pages/mycenter/mycenter",
+        "text": "我的",
+        "iconPath": "./static/imgs/common/center.png",
+        "selectedIconPath": "./static/imgs/common/center-select.png"
+      },
+      {
+        "pagePath": "pages/contact/contact",
+        "text": "客服",
+        "iconPath": "./static/imgs/common/contact.png",
+        "selectedIconPath": "./static/imgs/common/contact-select.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

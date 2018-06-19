@@ -1,0 +1,175 @@
+/* pages/orderlist/orderlist.wxss */
+page {
+	background-color: #F1F2F3;
+}
+
+.list {
+	padding: 0 40rpx 40rpx 40rpx;
+}
+
+.item {
+	padding-top: 40rpx;
+	box-sizing: border-box;
+}
+
+.date {
+	color: #FFF;
+	background-color: #70AAF4;
+	font-size: 25rpx;
+	border-radius: 40rpx;
+	width: 250rpx;
+	padding: 5rpx 0;
+	text-align: center;
+	margin: 20rpx 0;
+}
+
+.card {
+	width: 100%;
+	height: 260rpx;
+	border-radius: 10rpx;
+	box-shadow: 0 2rpx 16rpx 0 rgba(53,53,53,0.2);
+	background-color: #FFF;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+}
+
+.img {
+	width: 290rpx;
+	height: 100%;
+	overflow: hidden;
+}
+
+.timage {
+	width: 100%;
+	height: 100%;
+}
+
+.detail {
+	box-sizing: border-box;
+	padding: 30rpx 0rpx 0 40rpx;
+}
+
+.name {
+	width: 100%;
+	font-size: 32rpx;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.sdate {
+	margin-top: 10rpx;
+	font-size: 26rpx;
+	color: #888;
+}
+
+.price {
+	margin-top: 10rpx;
+	font-size: 26rpx;
+	color: #888;
+}
+
+.price-text {
+	color: #FF0000;
+}
+
+.options {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 40rpx;
+	/*border-top: 1rpx solid #eee;*/
+}
+
+.delete {
+	font-size: 26rpx;
+}
+
+.view-detail {
+	font-size: 26rpx;
+	color: #70AAF4;
+}
+
+.nopay-cared {
+	width: 100%;
+	height: 220rpx;
+	box-sizing: border-box;
+	border-radius: 10rpx;
+	background-color: #FFF;
+	box-shadow: 0 2rpx 16rpx 0 rgba(53,53,53,0.2);
+	padding: 30rpx 30rpx 0 30rpx;
+}
+
+.info {
+	position: relative;
+}
+
+.price {
+	position: absolute;
+	right: 10rpx;
+	top: -5rpx;
+	text-align: right;
+}
+
+.name {
+	width: 450rpx;
+	font-size: 30rpx;
+}
+
+.name2 {
+	width: 280rpx;
+	font-size: 30rpx;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.datescope {
+	font-size: 28rpx;
+	color: #888;
+	padding: 10rpx 0;
+}
+
+.option-pay {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin-top: 10rpx;
+}
+
+.cancel {
+	width: 110rpx;
+	padding: 8rpx 0;
+	border-radius: 30rpx;
+	background-color: #F1F2F3;
+	font-size: 28rpx;
+	color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 40rpx;
+}
+.submit {
+	width: 150rpx;
+	padding: 8rpx 0;
+	border-radius: 30rpx;
+	background-color: #FF0000;
+	font-size: 28rpx;
+	color: #FFF;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.price-word {
+	color: #FF0000;
+}
+
+.empty {
+	font-size: 26rpx;
+	color: #888;
+	padding-top: 80rpx;
+	text-align: center;
+}

@@ -1,0 +1,5 @@
+{
+	"usingComponents": {
+    "categoryitem": "../../components/categoryitem/categoryitem"
+  }
+}

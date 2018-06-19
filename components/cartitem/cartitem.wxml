@@ -1,0 +1,25 @@
+<!--components/cartitem/cartitem.wxml-->
+<view class="cart-item" data-id="{{item.id}}" bind:tap="goDetail">
+	<view class="left">
+		<image class="cart-banner" lazy-load="true" src="{{item.banner}}" mode="scaleToFill"></image>
+	</view>
+	<view class="right">
+		<view class="name">
+			{{item.name}}
+		</view>
+		<view class="advance">
+			提前报名：<text class="advance-text">建议提前{{item.advance}}天以上</text>
+		</view>
+		<view class="delete" data-id="{{item.id}}" catch:tap="deleteCartItem">
+			删除
+		</view>
+		<view class="sale-and-price">
+			<view class="saled">
+				销量：{{item.saled}}
+			</view>
+			<view class="price">
+				￥{{item.price}}
+			</view>
+		</view>
+	</view>
+</view>

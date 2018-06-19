@@ -1,0 +1,33 @@
+/* pages/shopping-cart/shopping-cart.wxss */
+page {
+  background-color: #F1F2F3;
+}
+
+.filter {
+	display: flex;
+	flex-direction: row;
+	background-color: #FFF;
+}
+
+.filter-item {
+	flex: 1;
+	padding: 20rpx 0;
+	color: #888;
+	font-size: 26rpx;
+	text-align: center;
+}
+
+.selected-item {
+	color: #353535;
+}
+
+.cart-list {
+	padding-bottom: 40rpx;
+}
+
+.empty {
+	font-size: 28rpx;
+	color: #888;
+	padding-top: 80rpx;
+	text-align: center;
+}

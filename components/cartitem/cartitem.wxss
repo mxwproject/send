@@ -1,0 +1,79 @@
+/* components/cartitem/cartitem.wxss */
+.cart-item {
+	margin-top: 20rpx;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	background-color: #FFF;
+	padding: 44rpx 30rpx; 
+}
+
+.cart-banner {
+	width: 320rpx;
+	height: 180rpx;
+}
+
+.cart-item .left {
+	overflow: hidden;
+}
+
+.right {
+	height: 180rpx;
+	padding: 0 20rpx;
+	position: relative;
+}
+
+.cart-item .name {
+	width: 350rpx;
+	color: #353535;
+	font-size: 26rpx;
+	font-weight: 700;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.cart-item .advance {
+	width: 350rpx;
+	color: #353535;
+	font-size: 20rpx;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	margin: 20rpx 0 30rpx 0;
+}
+
+.cart-item .advance-text {
+	color: #FF0000;
+}
+
+.delete {
+	font-size: 22rpx;
+	position: absolute;
+	bottom: 10rpx;
+	left: 20rpx;
+	color: #70AAF4;
+}
+
+.cart-item .sale-and-price {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding-right: 10rpx;
+}
+
+.cart-item .saled {
+	color: #888;
+	font-size: 20rpx;
+	margin-right: 20rpx;
+}
+
+.cart-item .price {
+	font-size: 32rpx;
+	font-weight: 700;
+	color: #FF0000;
+}

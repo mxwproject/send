@@ -1,0 +1,219 @@
+/* pages/submitorder/submitorder.wxss */
+page {
+	background-color: #F1F2F3;
+}
+
+.wrap {
+	padding-bottom: 120rpx;
+}
+
+.detail {
+	padding: 40rpx 20rpx;
+	box-sizing: border-box;
+}
+.d-content {
+	padding: 20rpx 0 20rpx 20rpx;
+}
+
+.d-line {
+	display: flex;
+	flex-direction: row;
+	margin: 12rpx 0;
+}
+
+.intro {
+	flex: 2;
+	font-size: 24rpx;
+	color: #888;
+}
+.content {
+	flex: 5;
+	font-size: 24rpx;
+	color: #888;
+	padding-left: 20rpx;
+}
+
+.red-word {
+	color: #F00;
+	margin-right: 10rpx;
+}
+
+.child-count {
+	margin-left: 10rpx;
+}
+
+.name {
+	display: flex;
+	flex-direction: row;
+}
+
+.tourname {
+	width: 445rpx;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+
+.d-content {
+	width: 700rpx;
+	height: 200rpx;
+	background-image: url(http://p96r0a67g.bkt.clouddn.com/Combined%20Shape.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.traveller-info {
+	padding: 40rpx 0;
+	margin-bottom: 20rpx;
+	background-color: #FFF;
+}
+.contacter {
+	border-bottom: 1rpx solid #888;
+	padding: 0 60rpx;
+}
+.travellers {
+	padding: 0 60rpx;
+	padding-top: 40rpx;
+}
+.ctitle {
+	font-size: 30rpx;
+	font-weight: bold;
+}
+.ct-line {
+	font-size: 27rpx;
+	color: #353535;
+	margin: 30rpx 0;
+}
+.t-list {
+	font-size: 27rpx;
+	color: #353535;
+	margin: 30rpx 0;
+}
+.t-item {
+	margin: 45rpx 0;
+	display: flex;
+	flex-direction: row;
+}
+.order-number {
+	padding-right: 50rpx;
+	padding-top: 5rpx;
+}
+.o-n {
+	color: #70AAF4;
+	border: 1rpx solid #70AAF4;
+	border-radius: 50%;
+	width: 25rpx;
+	height: 25rpx;
+	text-align: center;
+	line-height: 25rpx;
+	font-size: 24rpx;
+}
+.t-item .t-detail {
+	display: flex;
+	flex-direction: column;
+	font-size: 26rpx;
+}
+.t-item .t-detail view {
+	margin: 10rpx 0;
+}
+
+.operation {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin-top: 40rpx;
+	display: flex;
+	flex-direction: row;
+	height: 100rpx;
+	background-color: #FFF;
+	border-top: 1rpx solid #eee;
+	z-index: 2000;
+}
+
+.cc {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+}
+
+.cc-contact {
+	flex: 1;
+	position: relative;
+}
+
+.cc-cart {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cc-icon {
+	width: 48rpx;
+	height: 48rpx;
+}
+
+.we-icon {
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+}
+
+.cs_button{
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.buy {
+	flex: 2;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.buy-btn {
+	width: 270rpx;
+	height: 100%;
+	color: #FFF;
+	font-size: 34rpx;
+	background-color: #fe4f4f;
+	border-radius: 0;
+	margin: 0;
+	line-height: 100rpx;
+}
+
+.total {
+	font-size: 24rpx;
+	color: #F00;
+	padding-right: 20rpx;
+	padding-bottom: 10rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	box-sizing: border-box;
+}
+
+.youhui {
+	color: #000;
+}
+
+.jg {
+	height: 160rpx;
+	background-color: #F1F2F3;
+}
+
+.remark-wrap {
+	background-color: #FFF;
+	padding: 20rpx 0;
+	padding-left: 60rpx;
+}
+
+.remark {
+	font-size: 27rpx;
+	color: #353535;
+	margin-top: 10rpx;
+}

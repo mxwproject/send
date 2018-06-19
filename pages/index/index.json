@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "loginmodal": "../../components/loginmodal/loginmodal",
+    "listitem": "../../components/listitem/listitem"
+  }
+}

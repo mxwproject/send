@@ -1,0 +1,36 @@
+<view class="list" wx:if="{{!empty}}">
+	<view class="item active-bg" wx:for="{{limited_voucher}}" wx:key="" bind:tap="backToMakeorder" data-id="{{item.id}}" data-money="{{item.money / 100}}">
+		<view class="left">
+			<view class="amount">
+				￥{{ item.money / 100 }}
+			</view>
+			<view class="intro">
+				<view>代金券</view>
+				<view>全场任意使用</view>
+			</view>
+		</view>
+		<view class="right white-word first-right">
+				有效期至
+			{{ item.endtime }}
+		</view>
+	</view>
+	<view class="item active-bg" wx:for="{{unlimited_voucher}}" wx:key="" bind:tap="backToMakeorder">
+		<view class="left">
+			<view class="amount">
+				￥{{ item.money / 100 }}
+			</view>
+			<view class="intro">
+				<view>代金券</view>
+				<view>全场任意使用</view>
+			</view>
+		</view>
+		<view class="right white-word first-right">
+			永久有效
+		</view>
+	</view>
+
+</view>
+
+<view class="empty" wx:else>
+	亲，你还没有优惠券哦
+</view>

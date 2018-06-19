@@ -1,0 +1,27 @@
+<!--pages/contact/contact.wxml-->
+<view class="c-wrap">
+	<view class="wechat c-item">
+		<button class="cs_button wx_button" open-type="contact" session-from="weapp">
+		</button> 
+		<view class="wx-content">
+				<image class="c-icon" src="{{wechatIcon}}" mode="scaleToFill"></image>
+			<text class="c-text c-wx">
+				微信客服
+			</text>
+		</view>
+	</view>
+	<view class="phone c-item cs_button" bind:tap="openModal">
+		<image class="c-icon" src="{{phoneIcon}}" mode="scaleToFill"></image>
+		<text class="c-text">
+			联系客服
+		</text>
+	</view>
+</view>
+
+<view class="p-list" wx:if="{{showModal}}" bind:tap="closeModal">
+	<view class="content">
+		<view class="p-item" wx:for="{{phoneNumbers}}" data-number="{{item.number}}" catch:tap="calling">
+			{{item.name}}：{{ item.number }}
+		</view>
+	</view>
+</view>

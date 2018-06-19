@@ -1,0 +1,85 @@
+<view class="order">
+	<view class="order-info base-content">
+		<view class="space-item gword">
+			<view class="onumber">
+				订单编号：{{ order.oNumber }}
+			</view>
+			<view class="otime">
+				预定时间：{{ order.time }}
+			</view>
+		</view>
+		<view class="tourline">
+			{{ order.tourline }}
+		</view>
+		<view class="start-end">
+			<view class="start">
+				{{ order.startTime }} 出发
+			</view>
+			<view class="countt">
+				{{ order.adultCount }} 成人 {{ order.childCount }} 儿童
+			</view>
+			<view class="end">
+				{{ order.endTime }} 返程
+			</view>
+		</view>
+		<view class="space-item gword">
+			<view class="money">
+				实付款：<text class="red-money">￥{{ order.totalMoney }}</text>
+			</view>
+			<view class="tnumber">
+				{{ order.priceExplain }}
+			</view>
+		</view>
+	</view>
+	<view class="traveller-info base-content">
+		<view class="contacter">
+			<view class="ctitle">联系人信息</view>
+			<view class="ct-line">
+				{{ contacter.name }}  {{ contacter.phone }}
+			</view>
+			<view class="ct-line">
+				{{ contacter.email }}
+			</view>
+			<view class="ct-line">
+				{{ contacter.address }}
+			</view>
+		</view>
+		<view class="travellers">
+			<view class="ctitle">出行人信息</view>
+			<view class="t-list">
+				<view class="t-item" wx:for="{{travellers}}">
+					<view class="order-number">
+						<view class="o-n">
+							{{ index + 1 }}
+						</view>
+					</view>
+					<view class="t-detail">
+						{{ item.name }}  {{ item.phone }}
+						<view>
+							{{ item.idcard }}
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="remark-wrap">
+		<view class="ctitle">备注</view>
+		<view class="remark">
+			{{ order.order_memo }}
+		</view>
+	</view>
+
+	<view class="back-index" bind:tap="backtoindex">
+		回到首页
+	</view>
+
+	<view class="cc-contact">
+		<button class="cs_button" open-type="contact" session-from="weapp">
+		</button> 
+		<view class="contact-tip">
+			<image class="cc-icon" src="{{contactIcon}}" mode="scaleToFill"></image>
+			<text>联系客服</text>
+		</view>
+	</view>
+</view>

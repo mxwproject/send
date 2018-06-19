@@ -1,0 +1,41 @@
+<!--pages/search/search.wxml-->
+<view class="wrap">
+	<view class="keyword-wrap">
+		<view class="keyword">
+			<input placeholder="搜索想去的目的地、景点" 
+						auto-focus class="k-input"  
+						value="{{keyword}}"
+						placeholder-style="font-size: 26rpx;"
+						bindinput="bindKeyInput"/>
+			<view class="s-wrap" bind:tap="handleSearch">
+				<image class="search-icon" src="{{searchIcon}}" mode="scaleToFill"></image>
+			</view>
+		</view>
+	</view>
+	<view class="history" wx:if="{{history.length && !showList}}">
+		<view class="h-title">
+			<text>历史搜索</text>
+			<image class="delete-icon" src="{{deleteIcon}}" mode="scaleToFill" bind:tap="deleteHistory"></image>
+		</view>
+		<view class="h-list">
+			<view class="h-item" wx:for="{{history}}" bind:tap="chooseHistory" data-item="{{item}}">
+				{{ item }}
+			</view>
+		</view>
+	</view>
+	<view class="list" wx:if="{{showList}}">
+    <block wx:if="{{searchResult.length > 0}}" 
+    			wx:for="{{searchResult}}" 
+    			wx:key="{{item.id}}">
+    	<listitem item="{{item}}"></listitem>	
+    </block>
+    <block wx:if="{{searchResult.length == 0}}">
+    	<view class="none none-first">
+    		没有找到符合条件的结果
+    	</view>
+    	<view class="none">
+    		请修改条件重新查询
+    	</view>
+    </block>
+	</view>
+</view>

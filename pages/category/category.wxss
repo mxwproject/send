@@ -1,0 +1,145 @@
+/* pages/category/category.wxss */
+page {
+  /*background-color: #F1F2F3;*/
+}
+
+.filter {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #FFF;
+	margin-bottom: 20rpx;
+	height: 80rpx;
+	border-bottom: 1rpx solid #eee;
+	z-index: 200;
+	width: 100%;
+	position: fixed;
+	top: 87rpx;
+	left: 0;
+}
+
+.f-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	height: 100%;
+	box-sizing: border-box;
+	color: #888;
+	font-size: 26rpx;
+}
+
+.f-type {
+	border-right: 1rpx solid #eee;
+}
+
+.selected-item {
+	color: #353535;
+}
+
+.cart-list {
+	margin-top: 180rpx;
+	padding: 20rpx 20rpx;
+	overflow-x: hidden;
+}
+
+.none {
+	font-size: 26rpx;
+	color: #888;
+	text-align: center;
+}
+
+
+.t-filter-wrap {
+	position: fixed;
+	top: 165rpx;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .2);
+	z-index: 200;
+}
+
+.type-item {
+	font-size: 26rpx;
+	padding: 20rpx 40rpx;
+	background-color: #FFF;
+	border-bottom: 1rpx solid #eee;
+	color: #888;
+}
+
+.active-type {
+	color: #70AAF4;
+}
+
+.search {
+	width: 100%;
+	height: 66rpx;
+	/*padding: 30rpx 20rpx 0rpx 20rpx;*/
+	padding-bottom: 20rpx;
+	padding-top: 20rpx;
+	/*display: flex;
+	flex-direction: row;*/
+	position: fixed;
+	/*top: 20rpx;*/
+	/*left: 40rpx;*/
+	background: #FFF;
+	z-index: 200;
+}
+
+.location {
+	color: #FFF;
+	font-size: 24rpx;
+	background-color: #70AAF4;
+	width: 106rpx;
+	height: 100%;
+	border-radius: 0px;
+  border-bottom-left-radius: 12rpx;
+  border-top-left-radius: 12rpx;
+  /*text-align: center;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.location .arrow {
+	width: 0;
+	height: 0;
+	border-left: 10rpx solid #70AAF4;
+	border-right: 10rpx solid #70AAF4;
+	border-top: 10rpx solid #FFF;
+	border-bottom: 10rpx solid #70AAF4;
+	margin-top: 12rpx;
+	margin-left: 6rpx;
+}
+
+.keyword-input {
+	width: 80%;
+	height: 60rpx;
+	margin: 0 auto;
+	padding-left: 20rpx;
+	background-color: rgba(112, 170, 244, 0.3);
+	overflow: hidden;
+	border-radius: 0px;
+  border-radius: 12rpx;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20rpx;
+  font-size: 24rpx;
+	color: #888;
+}
+
+.search-icon {
+	width: 44rpx;
+	height: 44rpx;
+}
+
+.filter-icon {
+	width: 48rpx;
+	height: 48rpx;
+	padding-left: 6rpx;
+	margin-top: -2rpx;
+}

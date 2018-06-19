@@ -1,0 +1,74 @@
+<!--pages/orderlist/orderlist.wxml-->
+<view class="list" wx:if="{{count}}">
+	<view class="item nopay" wx:for="{{nopaylist}}" wx:if="{{type == 'nopay'}}">
+		<view class="date">
+			预订日期：{{ item.date }}
+		</view>
+		<view class="nopay-cared">
+			<view class="info">
+				<view class="name">
+					{{ item.name }}
+				</view>
+				<view class="datescope">
+					出发：{{ item.startDate }}　　行程：{{ item.tour_total_day }} 天
+				</view>
+				<view class="price">
+					<view class="price-word">
+						￥{{ item.price }}
+					</view>
+					<view>
+						未提交
+					</view>
+				</view>
+			</view>
+			<view class="option-pay">
+				<view class="cancel" bind:tap="deleteOrder" data-orderNo="{{item.orderNo}}">
+					取消
+				</view>
+				<view class="submit" bind:tap="handleContinue" data-orderNo="{{item.orderNo}}">
+					继续预订
+				</view>
+			</view>
+		</view>
+	</view>
+	<block wx:if="{{list.length && type == 'waitpay'}}">
+		<view class="item" wx:for="{{list}}">
+		<view class="date">
+			预订日期：{{ item.date }}
+		</view>
+		<view class="card" bind:tap="handleDetail" data-id="{{item.tourline_id}}">
+			<view class="img">
+				<image class="timage" src="{{ item.image }}" mode="scaleToFill"></image>
+			</view>
+			<view class="detail">
+				<view class="name2">
+					{{ item.name }}
+				</view>
+				<view class="sdate">
+					{{ item.adult }} 成人　{{ item.child }} 儿童
+				</view>
+				<view class="sdate">
+					出发：{{ item.startDate }}　行程：{{ item.tour_total_day }} 天
+				</view>
+				<view class="options">
+					<view class="delete">
+						已确认
+					</view>
+					<view class="view-detail" data-orderno="{{ item.orderNo }}" bind:tap="viewDetail">
+						订单详情
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	</block>
+	<block wx:if="{{!list.length && type == 'waitpay'}}">
+		<view class="empty">
+			暂无未出行订单
+		</view>
+	</block>
+</view>
+
+<view class="empty" wx:else>
+	暂无订单
+</view>

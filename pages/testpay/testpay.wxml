@@ -1,0 +1,4 @@
+<view>
+	<button bind:tap="testpay">testpay</button>
+	<view>{{tip}}</view>
+</view>

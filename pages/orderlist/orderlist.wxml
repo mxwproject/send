@@ -1,0 +1,36 @@
+<!--pages/orderlist/orderlist.wxml-->
+<view class="list" wx:if="{{list.length > 0}}">
+	<view class="item" wx:for="{{list}}">
+		<view class="date">
+			预订日期：{{ item.date }}
+		</view>
+		<view class="card" bind:tap="handleDetail" data-id="{{item.tourline_id}}">
+			<view class="img">
+				<image class="timage" src="{{ item.image }}" mode="scaleToFill"></image>
+			</view>
+			<view class="detail">
+				<view class="name">
+					{{ item.name }}
+				</view>
+				<view class="sdate">
+					出发：{{ item.startDate }}  行程：{{ item.tour_total_day }} 天
+				</view>
+				<view class="price">
+					<text class="price-text">￥{{ item.price }}</text> 　　已成交
+				</view>
+				<view class="options">
+					<view class="delete" data-orderno="{{ item.orderNo }}" bind:tap="deleteOrder">
+						删除
+					</view>
+					<view class="view-detail" data-orderno="{{ item.orderNo }}" bind:tap="viewDetail">
+						查看详情
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="empty" wx:else>
+	暂无订单
+</view>

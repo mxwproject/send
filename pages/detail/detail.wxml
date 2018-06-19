@@ -1,0 +1,125 @@
+<import src="../../components/wxParser/index.wxml"/>
+
+<view class="d-wrap">
+	<view class="intro">
+		<view class="banner">
+			<image class="banner-img" src="{{ base.image }}" mode="scaleToFill"></image>
+			<text class="banner-number">{{ base.priceExplain }}</text>
+		</view>
+
+		<view class="title">
+			{{ base.name }}
+		</view>
+
+		<view class="tags">
+			
+		</view>
+
+		<view class="sd">
+			<view class="saled">
+				<text class="real-price">
+					￥{{ base.price }}
+				</text>
+				<text class="up-price">
+					起
+				</text>
+			</view>
+			<view class="price">
+				销量：{{ base.sale }}
+			</view>
+		</view>
+
+		<view class="gray">
+			<view class="line"></view>
+		</view>
+
+		<view class="desc">
+			{{ base.brief }}
+		</view>
+	</view>
+
+	<view class="html-c">
+		<template is="wxParser" data="{{ wxParserData:xc.nodes }}"/>
+	</view>
+
+	<view class="html-c">
+		<template is="wxParser" data="{{ wxParserData:yd.nodes }}"/>
+	</view>
+
+	<view class="jg"></view>
+
+	<!-- 操作 -->
+	<view class="operation" wx:if="{{ requestEnd }}">
+		<view class="cc">
+			<view class="cc-contact">
+				<button class="cs_button" open-type="contact" session-from="weapp">
+				</button> 
+				<image class="cc-icon we-icon" src="{{wechatIcon}}" mode="scaleToFill"></image>
+			</view>
+			<view class="cc-cart" bind:tap="addToCart">
+				<image class="cc-icon" src="{{iconCurrent}}" mode="scaleToFill"></image>
+			</view>
+		</view>
+		<view class="buy" bind:tap="handleOrder">
+			<button class="buy-btn">
+				预定购买
+			</button>
+		</view>
+	</view>
+</view>
+
+<view class="c-wrap" 
+			bind:tap="hidecWrap"
+			style="height: {{clientHeight}}" 
+			wx:if="{{chooseLine}}">
+	<view class="c-content" catch:tap="catchBubble">
+		<view class="c-title">
+			出行日期
+		</view>
+		<view class="c-list">
+			<view 
+					class="c-item {{activeline == index ? 'c-active' : ''}}" 
+					wx:for="{{tourlineItem}}"
+					data-index="{{index}}"
+					data-id="{{item.id}}"
+					data-adult_sale_price="{{item.adult_sale_price}}"
+					data-child_sale_price="{{item.child_sale_price}}"
+					catch:tap="selectline">
+				{{ item.start_time }}  {{ item.adult_sale_price / 100}}元/人  {{ item.child_sale_price / 100 }}元/儿童
+			</view>
+		</view>
+		<view class="c-title">
+			选择人数
+		</view>
+		<view class="c-count">
+			<view class="c-adult">
+				<view class="c-count-title">成人</view>  
+				<button catch:tap="dropAdult" class="c-button">-</button>
+				<input  
+					bindinput="bindAdultInput" 
+					placeholder="" 
+					class="c-input"
+					value="{{adultCount}}"/>
+				<button catch:tap="addAdult" class="c-button">+</button>
+			</view>
+			<view class="c-child">
+				<view class="c-count-title">
+					儿童
+				</view>
+				<button catch:tap="dropChild" class="c-button">-</button>
+				<input  
+					bindinput="bindChildInput" 
+					placeholder="" 
+					class="c-input"
+					value="{{childCount}}"/>
+				<button catch:tap="addChild" class="c-button">+</button>
+			</view>
+		</view>
+		<view class="c-submit" catch:tap="handleWrapSubmit">
+			确定
+		</view>
+	</view>
+</view>
+
+
+

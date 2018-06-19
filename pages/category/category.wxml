@@ -1,0 +1,65 @@
+<view class="cart-contaienr">
+	<view class="search">
+  	<!-- <view class="location">
+  		<text class="cityName">上海</text>
+  		<view class="arrow"></view>
+  	</view> -->
+  	<view class="keyword-input" bind:tap="handleSearch">
+  		<text>搜索想去的目的地、景点</text>
+      <image class="search-icon" src="{{searchIcon}}" mode="scaleToFill"></image>
+  	</view>
+  </view>
+
+	<!-- 筛选 -->
+	<view class="filter">
+		<view class="f-type f-item {{filterType == 1 ? 'active-type' : ''}}" bind:tap="chooseTypeFilter">
+			{{ typename }}
+			<image class="filter-icon" src="{{filter1Icon}}" mode="scaleToFill"></image>
+		</view>
+		<view class="f-condition f-item {{filterType == 2 ? 'active-type' : ''}}" bind:tap="chooseOtherFilter">
+			{{ filterTypeName }}
+			<image class="filter-icon" src="{{filter2Icon}}" mode="scaleToFill"></image>
+		</view>
+	</view>
+	<block wx:if="{{list.length > 0}}">
+		<view 
+			style='height:{{clientHeight}};overflow:{{overflow}};'
+			class="cart-list" >
+			<block wx:for="{{list}}" wx:for-index="idx" wx:for-item="item">
+				<categoryitem item="{{item}}"></categoryitem>
+			</block>
+		</view>
+	</block>
+	<block wx:else>
+		<view class="none">
+			暂无此分类线路
+		</view>
+	</block>
+</view>
+
+
+<view 
+	class="t-filter-wrap" 
+	animation="{{animationData}}"
+	wx:if="{{chooseTypeWrapper}}" 
+	bind:tap="hideFilterCoop">
+	<view class="type" wx:if="{{filterType == 1}}">
+		<view wx:for="{{types}}" 
+					data-id="{{item.id}}" 
+					data-name="{{item.name}}"
+					class="type-item {{item.name == typename ? 'active-type' : ''}}" 
+					bind:tap="handleChooseType">
+			{{ item.name }}
+		</view>
+	</view>
+	<view wx:else="">
+		<view wx:for="{{filterTypes}}" 
+					data-sort="{{item.sort}}" 
+					data-order="{{item.order}}" 
+					data-name="{{item.name}}"
+					class="type-item {{item.name == filterTypeName ? 'active-type' : ''}}" 
+					bind:tap="handleChooseFilterType">
+			{{ item.name }}
+		</view>
+	</view>
+</view>

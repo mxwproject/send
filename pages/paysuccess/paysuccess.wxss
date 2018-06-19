@@ -1,0 +1,16 @@
+/* pages/paysuccess/paysuccess.wxss */
+
+.success {
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 80rpx;
+}
+.s-tip {
+	font-size: 34rpx;
+	padding: 20rpx 0;
+}
+.detail {
+	font-size: 28rpx;
+	color: #70AAF4;
+	padding: 20rpx 0;
+}

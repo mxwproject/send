@@ -1,0 +1,12 @@
+<!--pages/shopping-cart/shopping-cart.wxml-->
+<view class="cart-contaienr">
+	<!-- 筛选 -->
+	<view class="cart-list" wx:if="{{list.length}}">
+		<block wx:for="{{list}}" wx:for-index="idx" wx:for-item="item">
+			<cartitem item="{{item}}" binddelete="delete"></cartitem>
+		</block>
+	</view>
+	<view wx:else class="empty">
+		收藏夹空空如也，快去收藏行程吧
+	</view>
+</view>

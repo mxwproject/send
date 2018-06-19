@@ -1,0 +1,8 @@
+<!--pages/paysuccess/paysuccess.wxml-->
+<view class="success">
+	<icon type="success" size="80"/>
+	<view class="s-tip">
+		支付成功
+	</view>
+	<view bind:tap="goDetail" class="detail">查看订单详情</view>
+</view>
