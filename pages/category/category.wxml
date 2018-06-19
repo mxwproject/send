@@ -1,14 +1,14 @@
 <view class="cart-contaienr">
-	<view class="search">
+	<!-- <view class="search"> -->
   	<!-- <view class="location">
   		<text class="cityName">上海</text>
   		<view class="arrow"></view>
   	</view> -->
-  	<view class="keyword-input" bind:tap="handleSearch">
+  	<!-- <view class="keyword-input" bind:tap="handleSearch">
   		<text>搜索想去的目的地、景点</text>
       <image class="search-icon" src="{{searchIcon}}" mode="scaleToFill"></image>
-  	</view>
-  </view>
+  	</view> -->
+  <!-- </view> -->
 
 	<!-- 筛选 -->
 	<view class="filter">

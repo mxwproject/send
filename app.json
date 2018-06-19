@@ -21,7 +21,7 @@
   "window": {
     "navigationBarBackgroundColor": "#70AAF4",
     "backgroundTextStyle": "light",
-    "navigationBarTitleText": "旅优惠",
+    "navigationBarTitleText": "发货啦",
     "navigationBarTextStyle": "#FFF"
   },
   "tabBar": {
@@ -37,28 +37,10 @@
         "selectedIconPath": "./static/imgs/common/index-select.png"
       },
       {
-        "pagePath": "pages/category/category",
-        "text": "分类",
-        "iconPath": "./static/imgs/common/category.png",
-        "selectedIconPath": "./static/imgs/common/category-select.png"
-      },
-      {
-        "pagePath": "pages/shopping-cart/shopping-cart",
-        "text": "收藏",
-        "iconPath": "./static/imgs/common/cart.png",
-        "selectedIconPath": "./static/imgs/common/cart-select.png"
-      },
-      {
         "pagePath": "pages/mycenter/mycenter",
         "text": "我的",
         "iconPath": "./static/imgs/common/center.png",
         "selectedIconPath": "./static/imgs/common/center-select.png"
-      },
-      {
-        "pagePath": "pages/contact/contact",
-        "text": "客服",
-        "iconPath": "./static/imgs/common/contact.png",
-        "selectedIconPath": "./static/imgs/common/contact-select.png"
       }
     ]
   },

@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "loginmodal": "../../components/loginmodal/loginmodal",
-    "listitem": "../../components/listitem/listitem"
+    "listitem": "../../components/listitem/listitem",
+    "categoryitem": "../../components/categoryitem/categoryitem"
   }
 }

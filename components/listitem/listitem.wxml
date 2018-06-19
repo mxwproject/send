@@ -1,22 +1,29 @@
 <!--components/listitem/listitem.wxml-->
 <view class="list-item" bind:tap="goDetail" data-id="{{item.id}}}">
-	<view class="left">
-		<image class="item-banner" lazy-load="true" src="{{item.banner}}" mode="scaleToFill"></image>
+	<view class="row">
+		<view class="con">
+			出发地: 上海
+		</view>
+		<view class="con">
+			目的地: 北京
+		</view>
 	</view>
-	<view class="right">
-		<view class="name">
-			{{item.name}}
+	<view class="row">
+		<view class="con">
+			吨数: 11
 		</view>
-		<view class="intro">
-			{{item.intro}}
+		<view class="con">
+			价格(元/吨): 11
 		</view>
-		<view class="sale-and-price">
-			<view class="saled">
-				销量：{{item.saled}}
-			</view>
-			<view class="price">
-				￥{{item.price}}
-			</view>
+	</view>
+	<view class="row">
+		<view class="con">
+			联系电话: 11
+		</view>
+	</view>
+	<view class="row">
+		<view class="con">
+			备注: 11
 		</view>
 	</view>
 </view>

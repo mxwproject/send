@@ -1,10 +1,13 @@
 <view class="cart-item" data-id="{{item.id}}" bind:tap="goDetail">
-	<view class="left">
+	<!-- <view class="left">
 		<image class="cart-banner" lazy-load="true" src="{{item.banner}}" mode="scaleToFill"></image>
+	</view> -->
+	<view class="name">
+		出发地: {{item.name}}
 	</view>
-	<view class="right">
+	<!-- <view class="right">
 		<view class="name">
-			{{item.name}}
+			出发地:{{item.name}}
 		</view>
 		<view class="advance">
 			<text class="advance-text">{{item.intro}}</text>
@@ -17,5 +20,5 @@
 				￥{{item.price}}
 			</view>
 		</view>
-	</view>
+	</view> -->
 </view>
