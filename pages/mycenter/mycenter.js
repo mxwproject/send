@@ -95,14 +95,38 @@ Page({
   },
 
   handleNopayList() {
-    wx.navigateTo({
-      url: '/pages/notusedorder/notusedorder?type=nopay'
+    wx.showToast({
+      title: '敬请期待',
+      icon: 'none', // "success", "loading", "none"
+      duration: 1000,
+      mask: false,
+      success: (res) => {
+        
+      },
+      fail: (res) => {
+        
+      },
+      complete: (res) => {
+        
+      }
     })
   },
 
   handleWaitpayList() {
-    wx.navigateTo({
-      url: '/pages/notusedorder/notusedorder?type=waitpay'
+    wx.showToast({
+      title: '敬请期待',
+      icon: 'none', // "success", "loading", "none"
+      duration: 1000,
+      mask: false,
+      success: (res) => {
+        
+      },
+      fail: (res) => {
+        
+      },
+      complete: (res) => {
+        
+      }
     })
   },
 
