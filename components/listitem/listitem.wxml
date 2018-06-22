@@ -5,25 +5,25 @@
 			出发地: {{item.departure}}
 		</view>
 		<view class="con">
-			目的地: 北京
+			目的地: {{item.focus}}
 		</view>
 	</view>
 	<view class="row">
 		<view class="con">
-			吨数: 11
+			吨数: {{item.tunnage ? item.tunnage : ''}}
 		</view>
 		<view class="con">
-			价格(元/吨): 11
-		</view>
-	</view>
-	<view class="row">
-		<view class="con">
-			联系电话: 11
+			价格(元/吨): {{item.unitPrice ? item.unitPrice : ''}}
 		</view>
 	</view>
 	<view class="row">
 		<view class="con">
-			备注: 11
+			联系电话: {{item.mobile}}
+		</view>
+	</view>
+	<view class="row">
+		<view class="con">
+			备注: {{item.remark}}
 		</view>
 	</view>
 </view>
