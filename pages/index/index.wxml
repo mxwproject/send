@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
 	<view class="list">
-		<block wx:for="{{logistics}}" wx:for-index="idx" wx:for-item="item">
+		<block wx:for="{{logistics}}" wx:key="key">
 			<listitem item="{{item}}"></listitem>	
 		</block>
 	</view>

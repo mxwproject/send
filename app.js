@@ -14,7 +14,7 @@ App({
         var tokenSetTime = wx.getStorageSync('tokenSetTime');
         // this.wechatLogin(res.code);
         if(!token) {
-          this.wechatLogin(res.code);
+          // this.wechatLogin(res.code);
         }else {
           // 验证token有效期
           let now = new Date().getTime();
@@ -26,7 +26,7 @@ App({
             } catch(e) {
                 
             }
-            this.wechatLogin(res.code);
+            // this.wechatLogin(res.code);
           }else {
             this.globalData.token = token;
           }

@@ -1,5 +1,5 @@
 <!--components/listitem/listitem.wxml-->
-<view class="list-item" bind:tap="goDetail" data-id="{{item.id}}}">
+<view class="list-item" data-id="{{item.id}}}">
 	<view class="row">
 		<view class="con">
 			出发地: {{item.departure}}

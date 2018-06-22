@@ -1,5 +1,6 @@
 // put api list here
-const baseUrl = 'http://send.wwlin.cn/api'
+const baseUrl = 'https://wwlin.cn/api'
+// const baseUrl = 'http://localhost:3000/api'
 
 // 所有接口列表如下：
 const getLogistics = (pageSize, pageNo) => {

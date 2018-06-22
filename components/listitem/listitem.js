@@ -20,11 +20,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    goDetail(e) {
-      var id = e.currentTarget.dataset.id;
-      wx.navigateTo({
-        url: `/pages/detail/detail?id=${id}`,
-      })
-    }
+
   }
 })

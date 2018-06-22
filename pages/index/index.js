@@ -13,10 +13,6 @@ Page({
   },
 
   onLoad: function () {
-    this.initData();
-  },
-
-  initData() {
     this.getLogistics();
   },
 
@@ -38,5 +34,9 @@ Page({
         logistics: [...this.data.logistics, ...result]
       })
     })
-  }
+  },
+
+  onShareAppMessage: function () {
+  
+  },
 })

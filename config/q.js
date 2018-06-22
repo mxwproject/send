@@ -22,7 +22,6 @@ const q = (option = {}) => {
         }
       },
       fail: function(err) {
-        // reject(err)
         wx.hideLoading();
         wx.showToast({
           title: err,
