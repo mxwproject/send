@@ -1,8 +1,10 @@
 // put api list here
-const baseUrl = 'https://lyh.uu-club.com/api'
+const baseUrl = 'http://localhost:3000/api'
 
 // 所有接口列表如下：
-const getHomeInfo = `${baseUrl}/home`;
+const getLogistics = (pageSize, pageNo) => {
+  return `${baseUrl}/logistic?pageSize=${pageSize}&pageNo=${pageNo}`;
+};
 
 const tourlineTypeList = `${baseUrl}/tourline`;
 
@@ -54,7 +56,7 @@ const getSendCode = `${baseUrl}/user/sendCode`;   // 发送验证码
 const bindMobile = `${baseUrl}/user/bindMobile`;   // 绑定手机号
 
 module.exports = {
-  getHomeInfo: getHomeInfo,
+  getLogistics: getLogistics,
   getTourlineDetail: getTourlineDetail,
   getTourlineDetailItem: getTourlineDetailItem,
   searchByKeyword: searchByKeyword,

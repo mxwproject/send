@@ -2,7 +2,7 @@
 <view class="list-item" bind:tap="goDetail" data-id="{{item.id}}}">
 	<view class="row">
 		<view class="con">
-			出发地: 上海
+			出发地: {{item.departure}}
 		</view>
 		<view class="con">
 			目的地: 北京

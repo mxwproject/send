@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class="container">
 	<view class="list">
-		<block wx:for="{{recommendCommon}}">
-			<listitem></listitem>	
+		<block wx:for="{{logistics}}" wx:for-index="idx" wx:for-item="item">
+			<listitem item="{{item}}"></listitem>	
 		</block>
 	</view>
 </view>
