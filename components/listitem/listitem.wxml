@@ -1,6 +1,7 @@
 <!--components/listitem/listitem.wxml-->
 <view class="list-item" data-id="{{item.id}}}">
-	<view class="row">
+	<view class="content">{{item.content}}</view>
+	<!-- <view class="row">
 		<view class="con">
 			出发地: {{item.departure}}
 		</view>
@@ -25,5 +26,5 @@
 		<view class="con">
 			备注: {{item.remark}}
 		</view>
-	</view>
+	</view> -->
 </view>

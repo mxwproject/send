@@ -1,9 +1,13 @@
 .list-item {
 	margin-top: 30rpx;
 	box-shadow: 0rpx 2rpx 16rpx 0 rgba(53,53,53,0.2);
-	height: 235rpx;
+	/* height: 235rpx; */
 	border-radius: 12rpx;
 	overflow: hidden;
+}
+
+.content {
+	white-space: pre-line;
 }
 
 .list-item .row {
