@@ -1,0 +1,36 @@
+.picker {
+	font-size: 26rpx;
+	width: 150rpx;
+	background-color: #70AAF4;
+	color: #FFF;
+	border-radius: 8rpx;
+	text-align: center;
+	padding: 10rpx 0;
+}
+
+.row {
+    float: right;
+	display:flex;
+	margin-top:30rpx;
+	margin-right:15rpx;
+}
+
+.clear {
+    margin-right: 40rpx;
+}
+
+.sub {
+    margin-right: 10rpx;
+}
+
+.textarea {
+	height:550rpx;  
+	font-size: 30rpx;  
+	text-indent: 28rpx;  
+	border: 1rpx solid gainsboro;  
+	padding-top: 30rpx;  
+	margin: 0 auto;  
+	overflow: hidden;     
+	position: relative; 
+	margin-top: 30rpx;
+}

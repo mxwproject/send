@@ -1,0 +1,16 @@
+<view style="overflow: hidden;" >
+    <textarea 
+        class="textarea" 
+        maxlength="-1"
+        value="{{text}}"
+        bindinput="inputs"
+        placeholder="输入货源" />
+    <view class="row">
+        <view class="picker clear" bind:tap="clear">
+            清除
+        </view>
+        <view class="picker sub" bind:tap="sub">
+            提交
+        </view>
+    </view>
+</view>

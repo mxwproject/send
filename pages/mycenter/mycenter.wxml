@@ -4,26 +4,26 @@
     <open-data type="userAvatarUrl" class="avatar-img"></open-data>
   </view>
   <view class="list">
-  	<view class="item" bind:tap="handleWaitpayList">
+  	<view class="item" bind:tap="publish">
   		<view class="title">
   			<image class="title-icon" src="{{orderIcon}}" mode="scaleToFill"></image>
-  			<text>发布货物</text>
+  			<text>发布货源</text>
   		</view>
   		<view class="arrow">
         <!-- <text class="wait-pay" wx:if="{{haveWaitPay}}">待付款</text> -->
   			<image class="arrow-icon" src="{{arrowIcon}}" mode="scaleToFill"></image>
   		</view>
   	</view>
-    <view class="item" bind:tap="handleNopayList">
-      <view class="title">
+    <!-- <view class="item" bind:tap="handleNopayList"> -->
+      <!-- <view class="title">
         <image class="title-icon" src="{{orderIcon}}" mode="scaleToFill"></image>
         <text>我发布的货物</text>
       </view>
       <view class="arrow">
-        <!-- <text class="wait-pay" wx:if="{{haveWaitPay}}">待付款</text> -->
+        <text class="wait-pay" wx:if="{{haveWaitPay}}">待付款</text>
         <image class="arrow-icon" src="{{arrowIcon}}" mode="scaleToFill"></image>
-      </view>
-    </view>
+      </view> -->
+    <!-- </view> -->
     <!-- <view class="order" wx:if="{{haveFinish}}">
       <view class="cards">
         <view class="date">

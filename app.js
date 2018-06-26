@@ -12,9 +12,9 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         var token = wx.getStorageSync('token');
         var tokenSetTime = wx.getStorageSync('tokenSetTime');
-        // this.wechatLogin(res.code);
+        this.wechatLogin(res.code);
         if(!token) {
-          // this.wechatLogin(res.code);
+          this.wechatLogin(res.code);
         }else {
           // 验证token有效期
           let now = new Date().getTime();
@@ -53,7 +53,6 @@ App({
           }
         }
       })
-
     })
 
     updateManager.onUpdateFailed(function () {

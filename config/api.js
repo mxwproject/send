@@ -1,11 +1,17 @@
 // put api list here
-const baseUrl = 'https://wwlin.cn/api'
-// const baseUrl = 'http://localhost:3000/api'
+// const baseUrl = 'https://wwlin.cn/api'
+const baseUrl = 'http://localhost:3000/api'
 
 // 所有接口列表如下：
+// 获取货源列表
 const getLogistics = (pageSize, pageNo) => {
   return `${baseUrl}/logistic?pageSize=${pageSize}&pageNo=${pageNo}`;
 };
+// 获取我的货源
+const getMyLogistic = `${baseUrl}/logistic/byUser`;
+
+// 发布货源
+const addLogistic = `${baseUrl}/logistic`;
 
 const tourlineTypeList = `${baseUrl}/tourline`;
 
@@ -58,6 +64,8 @@ const bindMobile = `${baseUrl}/user/bindMobile`;   // 绑定手机号
 
 module.exports = {
   getLogistics: getLogistics,
+  getMyLogistic: getMyLogistic,
+  addLogistic: addLogistic,
   getTourlineDetail: getTourlineDetail,
   getTourlineDetailItem: getTourlineDetailItem,
   searchByKeyword: searchByKeyword,

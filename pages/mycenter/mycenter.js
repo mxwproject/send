@@ -101,21 +101,9 @@ Page({
     })
   },
 
-  handleWaitpayList() {
-    wx.showToast({
-      title: '敬请期待',
-      icon: 'none', // "success", "loading", "none"
-      duration: 1000,
-      mask: false,
-      success: (res) => {
-        
-      },
-      fail: (res) => {
-        
-      },
-      complete: (res) => {
-        
-      }
+  publish() {
+    wx.navigateTo({
+      url: `/pages/publish/publish`
     })
   },
 
